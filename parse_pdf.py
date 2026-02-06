@@ -1,8 +1,8 @@
 import pymupdf4llm
 import pathlib
 
-pdf_path = pathlib.Path("documentacao/i8429en.pdf")
+pdf_path = pathlib.Path("docs/financas_corporativas.pdf")
 
-pdf_text = pymupdf4llm.to_markdown(pdf_path, pages=range(0,227))
+pdf_text = pymupdf4llm.to_markdown(pdf_path, pages=range(0,134))
 
-pathlib.Path("documentacao/livros/i8429en.mdc").write_text(pdf_text)
+pathlib.Path("docs/financas_corporativas.md").write_text(pdf_text)
