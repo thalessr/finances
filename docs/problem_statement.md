@@ -1,3 +1,30 @@
+# Fluxo de Caixa Projetado — Cia. Argo Energy
+
+Resumo do fluxo de caixa do projeto (horizonte 20X0–20X5). Pressupostos principais:
+- Investimento inicial (CAPEX) em 20X0: R$ 3.600.000,00
+- Depreciação linear: 5 anos (R$ 720.000/ano), start em 20X1
+- IRPJ + CSLL efetiva considerada: 34% sobre o LAIR
+- Custos fixos anuais: R$ 180.000,00
+- Custos variáveis: 55% da receita
+- Preço de venda: R$ 375,00/unidade
+- Vendas ano 1 (20X1): 10.000 unidades; taxas de crescimento: 15% (20X2), 20% (20X3), 25% (20X4), 25% (20X5)
+
+O arquivo com os valores numéricos está em `docs/fluxo_de_caixa.csv` (pode ser convertido para .xlsx com o script `scripts/csv_to_xlsx.py`).
+
+|Ano|Unidades|Preço (R$)|Receita (R$)|Custo Variável (R$)|Custos Fixos (R$)|Depreciação (R$)|EBIT (R$)|Imposto (34%) (R$)|Lucro Líquido (R$)|Fluxo Operacional (R$)|CAPEX (R$)|Fluxo de Caixa Livre (R$)|
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|20X0|0|375,00|0,00|0,00|0,00|0,00|0,00|0,00|0,00|0,00|-3.600.000,00|-3.600.000,00|
+|20X1|10.000|375,00|3.750.000,00|2.062.500,00|180.000,00|720.000,00|787.500,00|267.750,00|519.750,00|1.239.750,00|0,00|1.239.750,00|
+|20X2|11.500|375,00|4.312.500,00|2.371.875,00|180.000,00|720.000,00|1.040.625,00|353.812,50|686.812,50|1.406.812,50|0,00|1.406.812,50|
+|20X3|13.800|375,00|5.175.000,00|2.846.250,00|180.000,00|720.000,00|1.428.750,00|485.775,00|942.975,00|1.662.975,00|0,00|1.662.975,00|
+|20X4|17.250|375,00|6.468.750,00|3.557.812,50|180.000,00|720.000,00|2.010.937,50|683.718,75|1.327.218,75|2.047.218,75|0,00|2.047.218,75|
+|20X5|21.563|375,00|8.086.125,00|4.447.368,75|180.000,00|720.000,00|2.738.756,25|931.176,12|1.807.580,13|2.527.580,13|0,00|2.527.580,13|
+
+Observações rápidas:
+- Depreciação é adicionada de volta no fluxo operacional (não é saída de caixa).
+- Impostos aplicados somente quando o EBIT for positivo (aqui sempre positivo nos anos operacionais).
+- Valores arredondados a centavos.
+
 # Análise de Viabilidade do Projeto — Cia. Argo Energy
 
 ## Contexto e Objetivo

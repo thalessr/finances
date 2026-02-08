@@ -1,0 +1,4 @@
+Scenario,Payback_Simple_Years,Payback_Discounted_10pct_Years,ROI_Pct
+Base,2.62,3.09,154.09
+Optimistic,2.24,2.60,205.06
+Pessimistic,3.50,4.35,66.51
